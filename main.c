@@ -6,22 +6,26 @@
 
 int main(int argc, char *argv[]) {
 	
-	char src[100] = "Programming course";
-	char dst[100];
-	int i;
-	int count=0;
+	char string[100];
 	
-	for (i=0; src[i] != NULL ; i++) {
-		dst[i] = src[i];
-		count++;
-	}
-	dst[i] = NULL;
-	//strcpy(dst, src); ¿Í °°´Ù. 
+	FILE *fp;
+	fp = fopen("sample.txt", "w");
 	
-	printf("%s(%d)\n", dst, count);
-	printf("already included.\n");
-	printf("strlen: %i", strlen(dst));
+	printf("Input a word: ");
+	scanf("%s", string);
+	fprintf(fp, "%s\n", string);
 	
+	printf("Input a word: ");
+	scanf("%s", string);
+	fprintf(fp, "%s\n", string);
+	
+	printf("Input a word: ");
+	scanf("%s", string);
+	fprintf(fp, "%s\n", string);
+	
+	fclose(fp);
+	
+
 	
 	return 0;
 }
